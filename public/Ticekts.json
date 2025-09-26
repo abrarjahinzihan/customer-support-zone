@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "title": "Login not working",
+        "description": "Customer unable to login with valid credentials.",
+        "customer": "John Doe",
+        "priority": "High",
+        "status": "In-Progress",
+        "createdAt": "2025-09-20T09:15:00Z"
+    },
+    {
+        "id": 2,
+        "title": "Payment gateway timeout",
+        "description": "Payment not processing for VISA cards.",
+        "customer": "Alice Smith",
+        "priority": "Critical",
+        "status": "Open",
+        "createdAt": "2025-09-19T14:45:00Z"
+    },
+    {
+        "id": 3,
+        "title": "Broken image on homepage",
+        "description": "Main banner image not loading on Chrome.",
+        "customer": "Robert Johnson",
+        "priority": "Medium",
+        "status": "Resolved",
+        "createdAt": "2025-09-18T08:20:00Z"
+    },
+    {
+        "id": 4,
+        "title": "Slow loading dashboard",
+        "description": "Dashboard taking more than 30s to load.",
+        "customer": "Emily Davis",
+        "priority": "High",
+        "status": "In-Progress",
+        "createdAt": "2025-09-17T10:05:00Z"
+    },
+    {
+        "id": 5,
+        "title": "Forgot password link broken",
+        "description": "Reset password email not being sent.",
+        "customer": "Michael Brown",
+        "priority": "High",
+        "status": "Open",
+        "createdAt": "2025-09-16T16:30:00Z"
+    },
+    {
+        "id": 6,
+        "title": "App crash on iOS",
+        "description": "App closes unexpectedly after splash screen.",
+        "customer": "Sophia Wilson",
+        "priority": "Critical",
+        "status": "Open",
+        "createdAt": "2025-09-15T12:00:00Z"
+    },
+    {
+        "id": 7,
+        "title": "Invoice download issue",
+        "description": "Users unable to download PDF invoices.",
+        "customer": "William Martinez",
+        "priority": "Medium",
+        "status": "Resolved",
+        "createdAt": "2025-09-14T09:50:00Z"
+    },
+    {
+        "id": 8,
+        "title": "Notification delays",
+        "description": "Push notifications arriving late by 10+ minutes.",
+        "customer": "Olivia Anderson",
+        "priority": "Low",
+        "status": "In-Progress",
+        "createdAt": "2025-09-13T11:40:00Z"
+    },
+    {
+        "id": 9,
+        "title": "Search results inaccurate",
+        "description": "Search not returning expected matches.",
+        "customer": "James Thomas",
+        "priority": "Medium",
+        "status": "Open",
+        "createdAt": "2025-09-12T07:25:00Z"
+    },
+    {
+        "id": 10,
+        "title": "Error 500 on checkout",
+        "description": "Server error when confirming orders.",
+        "customer": "Isabella Garcia",
+        "priority": "Critical",
+        "status": "In-Progress",
+        "createdAt": "2025-09-11T13:55:00Z"
+    },
+    {
+        "id": 11,
+        "title": "Profile picture upload failed",
+        "description": "Users cannot update profile pictures.",
+        "customer": "Benjamin Lee",
+        "priority": "Low",
+        "status": "Resolved",
+        "createdAt": "2025-09-10T15:15:00Z"
+    },
+    {
+        "id": 12,
+        "title": "Dark mode not saving",
+        "description": "User preference for dark mode resets on reload.",
+        "customer": "Mia Clark",
+        "priority": "Medium",
+        "status": "Open",
+        "createdAt": "2025-09-09T19:45:00Z"
+    },
+    {
+        "id": 13,
+        "title": "Two-factor authentication bug",
+        "description": "OTP codes not being accepted.",
+        "customer": "Daniel Rodriguez",
+        "priority": "High",
+        "status": "In-Progress",
+        "createdAt": "2025-09-08T06:35:00Z"
+    },
+    {
+        "id": 14,
+        "title": "Cart items disappearing",
+        "description": "Items removed automatically after refresh.",
+        "customer": "Charlotte Walker",
+        "priority": "High",
+        "status": "Open",
+        "createdAt": "2025-09-07T21:20:00Z"
+    },
+    {
+        "id": 15,
+        "title": "Email notifications in spam",
+        "description": "Order confirmation emails going to spam folder.",
+        "customer": "Henry Hall",
+        "priority": "Low",
+        "status": "Resolved",
+        "createdAt": "2025-09-06T18:10:00Z"
+    }
+]
