@@ -2,31 +2,47 @@ import React from "react";
 import Vector1 from "../assets/vector1.png";
 import Vector2 from "../assets/vector2.png";
 
-
 const Banner = ({ inProgressCount, resolvedCount }) => {
     return (
-        <div
-        className="w-full py-10 px-6 flex justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url("${Vector1}")` }}
-        >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 mx-auto pt-10">
 
-            <div
-            className="rounded-lg p-8 text-center text-white shadow-md"
-            style={{ background: "linear-gradient(135deg, #7C3AED, #9333EA)" }}
-            >
-            <h3 className="text-lg font-medium mb-2">In-Progress</h3>
-            <p className="text-4xl font-bold">{inProgressCount}</p>
-            </div>
+        <div className="relative bg-gradient-to-r from-[#632ee3] to-[#9f62f2] py-20 text-center text-white rounded-2xl overflow-hidden flex flex-col items-center justify-center">
+
+            <img
+            src={Vector1}
+            alt="Vector1"
+            className="absolute top-0 left-0 w-1/2 h-auto opacity-40"
+            />
+
+            <img
+            src={Vector2}
+            alt="Vector2"
+            className="absolute bottom-0 right-0 w-1/2 h-auto opacity-40"
+            />
 
 
-            <div
-            className="rounded-lg p-8 text-center text-white shadow-md"
-            style={{ background: "linear-gradient(135deg, #10B981, #047857)" }}
-            >
-            <h3 className="text-lg font-medium mb-2">Resolved</h3>
-            <p className="text-4xl font-bold">{resolvedCount}</p>
-            </div>
+            <h1 className="text-lg font-medium relative z-10">In-Progress</h1>
+            <span className="font-bold text-4xl relative z-10">{inProgressCount}</span>
+        </div>
+
+
+        <div className="relative bg-gradient-to-r from-[#54cf68] to-[#00827a] py-20 text-center text-white rounded-2xl overflow-hidden flex flex-col items-center justify-center">
+
+            <img
+            src={Vector1}
+            alt="Vector1"
+            className="absolute top-0 left-0 w-1/2 h-auto opacity-40"
+            />
+
+            <img
+            src={Vector2}
+            alt="Vector2"
+            className="absolute bottom-0 right-0 w-1/2 h-auto opacity-40"
+            />
+
+
+            <h1 className="text-lg font-medium relative z-10">Resolved</h1>
+            <span className="font-bold text-4xl relative z-10">{resolvedCount}</span>
         </div>
         </div>
     );

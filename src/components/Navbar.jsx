@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <div>
+        <div className='bg-[#FFFFFF]'>
             <nav>
                 <div className="navbar w-11/12 mx-auto">
                 <div className="navbar-start">

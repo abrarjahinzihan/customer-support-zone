@@ -29,41 +29,45 @@ function App() {
   }, [])
 
 const handleTicketClick = (title) => {
-  if (!taskStatus.includes(title)) {
-    setTaskStatus(prev => [...prev, title])
+  const ticketToUpdate = tickets.find(t => t.title === title);
+
+  if (!ticketToUpdate) return;
+
+  if (ticketToUpdate.status === "Open") {
+    if (!taskStatus.includes(title)) {
+      setTaskStatus(prev => [...prev, title]);
+    }
+
+    setInProgressCount(c => c + 1);
+    toast.info("In-Progress", { autoClose: 2000 });
 
     setTickets(prev =>
-      prev.map(ticket => {
-        if (ticket.title === title && ticket.status === "Open") {
-          setInProgressCount(c => c + 1) // count up
-          toast.info("In-Progress", { autoClose: 2000 })
-          return { ...ticket, status: "In-Progress" }
-        }
-        return ticket
-      })
-    )
+      prev.map(ticket =>
+        ticket.title === title ? { ...ticket, status: "In-Progress" } : ticket
+      )
+    );
+  } 
+  else if (ticketToUpdate.status === "In-Progress") {
+    toast.info("Already In-Progress", { autoClose: 2000 });
   }
-}
+};
 
 
 
 const handleComplete = (title) => {
-  setTaskStatus(prev => prev.filter(t => t !== title))  
-  setResolvedTasks(prev => [...prev, title])            
+  setTaskStatus(prev => prev.filter(t => t !== title));
+  setResolvedTasks(prev => [...prev, title]);
 
-  setTickets(prev =>
-    prev.map(ticket => {
-      if (ticket.title === title && ticket.status === "In-Progress") {
-        setInProgressCount(c => c - 1) 
-        setResolvedCount(c => c + 1)   
-        toast.success("Task Completed!", { autoClose: 2000 })
-        return { ...ticket, status: "Completed" }
-      }
-      return ticket
-    })
-  )
-  setTickets(prev => prev.filter(ticket => ticket.title !== title))
-}
+  const ticketToComplete = tickets.find(t => t.title === title && t.status === "In-Progress");
+  if (ticketToComplete) {
+    setInProgressCount(c => c - 1);
+    setResolvedCount(c => c + 1);
+    toast.success("Task Completed!", { autoClose: 2000 });
+
+    setTickets(prev => prev.filter(ticket => ticket.title !== title));
+  }
+};
+
 
   return (
     <>
