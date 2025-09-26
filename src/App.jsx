@@ -62,6 +62,7 @@ const handleComplete = (title) => {
       return ticket
     })
   )
+  setTickets(prev => prev.filter(ticket => ticket.title !== title))
 }
 
   return (

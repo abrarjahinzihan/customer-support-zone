@@ -16,20 +16,31 @@ const TicketsSection = ({ tickets, taskStatus, resolvedTasks, handleTicketClick,
                             className="card bg-base-100 shadow-md border rounded-lg p-4 cursor-pointer hover:shadow-lg transition"
                         >
 
-                            <div className="flex justify-between items-start">
+                            <div className="flex justify-between items-start ">
                                 <h3 className="text-base font-semibold">{ticket.title}</h3>
                                 <div
-                                    className={`badge ${
-                                        ticket.status === "Resolved"
-                                            ? "badge-success"
-                                            : ticket.status === "In-Progress"
-                                            ? "badge-warning"
-                                            : "badge-ghost"
-                                    }`}
+                                className={`badge ${
+                                    ticket.status === "Open"
+                                    ? "bg-[#B9F8CF] text-[#0B5E06]"
+                                    : ticket.status === "In-Progress"
+                                    ? "bg-[#F8F3B9] text-[#9C7700]"
+                                    : "badge-ghost"
+                                }`
+                            }
                                 >
+                                    <span
+                                    className={`w-2.5 h-2.5 rounded-full ${
+                                    ticket.status === "Open"
+                                    ? "bg-[#02A53B]"
+                                    : ticket.status === "In-Progress"
+                                    ? "bg-[#FEBB0C]"
+                                    : "bg-gray-400"
+                                    }`}
+                                    ></span>
+
                                     {ticket.status}
-                                </div>
                             </div>
+                        </div>
 
 
                             <p className="text-sm text-gray-600 mt-1 mb-2 line-clamp-2">
